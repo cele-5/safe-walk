@@ -77,6 +77,21 @@ sudo npm i -g expo-cli
 
 Don't forget to download the Expo Go app on your mobile (Android or iOS).
 
+### Add .env file
+
+The application secret information (such as the Facebook APP ID) shall not be stored in git, because the repository is public.
+
+Instead, we shall save them in a separate file, that is part of `.gitignore`, called `.env`. 
+To develop locally, you need to create this file in the root directory, and fill it with the following information:
+
+```
+FIREBASE_API_KEY=<your-firebase-api-key>
+FIREBASE_APP_ID=<your-firebase-app-id>
+FIREBASE_MESSAGING_SENDER_ID=<your-firebase-msg-sender-id>
+FACEBOOK_APP_ID=<your-facebook-app-id>
+FACEBOOK_APP_SECRET=<your-facebook-app-secret>
+```
+
 ### Start the project
 
 The first thing we need to do is fetch all the dependencies:
